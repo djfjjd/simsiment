@@ -32,8 +32,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ko">
-      <body>{children}</body>
+    <html lang="ko" style={{ background: "#f3f1eb", color: "#11110f" }}>
+      <body style={{ margin: 0, minHeight: "100vh", background: "#f3f1eb", color: "#11110f" }}>
+        <noscript>
+          <div className="boot-fallback">
+            <div><h1>SIMSIMENT</h1><p>MAKE THE NEXT SCENE.</p></div>
+          </div>
+        </noscript>
+        {children}
+      </body>
     </html>
   );
 }
