@@ -32,7 +32,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ko" style={{ background: "#f3f1eb", color: "#11110f" }}>
+    <html lang="ko" style={{ backgroundColor: "#f3f1eb", color: "#11110f", colorScheme: "light" }}>
       <body style={{ margin: 0, minHeight: "100vh", background: "#f3f1eb", color: "#11110f" }}>
         <noscript>
           <div className="boot-fallback">
