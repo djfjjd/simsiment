@@ -1,45 +1,96 @@
 <!doctype html>
-<html lang="ko">
+<html lang="ko" style="background:#f3f1eb;color:#11110f;color-scheme:light">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light">
-    <meta http-equiv="refresh" content="0; url=https://simsiment-entertainment.djfjjd.chatgpt.site/">
-    <link rel="canonical" href="https://simsiment-entertainment.djfjjd.chatgpt.site/">
+    <meta name="theme-color" content="#f3f1eb">
+    <meta name="description" content="새로운 목소리와 오래 남을 장면을 만드는 독립 엔터테인먼트, simsiment.">
     <title>SIMSIMENT — Make The Next Scene</title>
-    <style>
-      :root { color-scheme: light; }
-      * { box-sizing: border-box; }
-      html, body {
-        margin: 0;
-        min-height: 100%;
-        background: #11110f;
-        color: #d8ff36;
-        font-family: Arial, "Apple SD Gothic Neo", sans-serif;
-      }
-      main {
-        min-height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 24px;
-        text-align: center;
-      }
-      h1 { margin: 0; font-size: clamp(52px, 12vw, 160px); letter-spacing: -.08em; }
-      p { margin: 18px 0 28px; color: #f3f1eb; }
-      a { display: inline-block; padding: 14px 20px; background: #d8ff36; color: #11110f; font-weight: 700; text-decoration: none; }
-    </style>
-    <script>
-      window.location.replace("https://simsiment-entertainment.djfjjd.chatgpt.site/");
-    </script>
+    <link rel="stylesheet" href="./styles.css">
   </head>
-  <body>
+  <body style="margin:0;min-height:100vh;background:#f3f1eb;color:#11110f">
     <main>
-      <div>
-        <h1>SIMSIMENT</h1>
-        <p>MAKE THE NEXT SCENE.</p>
-        <a href="https://simsiment-entertainment.djfjjd.chatgpt.site/">사이트 열기</a>
-      </div>
+      <header class="site-header">
+        <a class="logo" href="#top">SIMSIMENT<span>®</span></a>
+        <input class="menu-toggle" id="menu-toggle" type="checkbox" aria-label="메뉴 열기">
+        <label class="menu-button" for="menu-toggle"><span class="menu-open">MENU</span><span class="menu-close">CLOSE</span></label>
+        <nav class="nav">
+          <a href="#artists">ARTISTS</a>
+          <a href="#releases">RELEASES</a>
+          <a href="#news">NEWS</a>
+          <a href="#about">ABOUT</a>
+          <a href="mailto:hello@simsiment.com">CONTACT</a>
+        </nav>
+      </header>
+
+      <section class="hero" id="top">
+        <p class="eyebrow">INDEPENDENT ENTERTAINMENT · SEOUL</p>
+        <h1>WE MAKE<br><em>THE NEXT</em><br>SCENE.</h1>
+        <div class="hero-bottom">
+          <p>새로운 목소리와<br>오래 남을 장면을 만듭니다.</p>
+          <span>SCROLL TO EXPLORE ↓</span>
+        </div>
+      </section>
+
+      <section class="manifesto" id="about">
+        <p>OUR PHILOSOPHY</p>
+        <h2>낯선 감각을 발견하고,<br>가장 선명한 방식으로<br><span>세상과 연결합니다.</span></h2>
+      </section>
+
+      <section class="section artists" id="artists">
+        <div class="section-heading">
+          <p>01 / ARTISTS</p>
+          <h2>OUR<br>VOICES</h2>
+          <span>03 ARTISTS</span>
+        </div>
+        <div class="artist-grid">
+          <article class="artist-card">
+            <div class="media-frame"><div class="placeholder"><span>SIMSI</span><i></i></div><span class="number">01</span></div>
+            <div><h3>NOA</h3><p>노아</p><small>장르의 경계를 흐리는 감각적인 보컬과 송라이팅.</small></div>
+          </article>
+          <article class="artist-card">
+            <div class="media-frame"><div class="placeholder"><span>SIMSI</span><i></i></div><span class="number">02</span></div>
+            <div><h3>LUNE</h3><p>룬</p><small>차갑고 선명한 사운드로 새로운 장면을 만드는 아티스트.</small></div>
+          </article>
+          <article class="artist-card">
+            <div class="media-frame"><div class="placeholder"><span>SIMSI</span><i></i></div><span class="number">03</span></div>
+            <div><h3>DIVE</h3><p>다이브</p><small>무대 위 에너지를 가장 솔직한 언어로 기록합니다.</small></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section releases" id="releases">
+        <div class="section-heading inverse">
+          <p>02 / RELEASES</p>
+          <h2>LATEST<br><i>SOUNDS</i></h2>
+          <span>LISTEN NOW</span>
+        </div>
+        <div class="release-grid">
+          <article class="release-card">
+            <div class="album-art"><div class="placeholder"><span>SIMSI</span><i></i></div></div>
+            <h3>AFTERIMAGE</h3><p>NOA · 1ST EP</p><small>잔상처럼 남는 다섯 개의 트랙.</small>
+          </article>
+          <article class="release-card">
+            <div class="album-art"><div class="placeholder"><span>SIMSI</span><i></i></div></div>
+            <h3>BLUE HOUR</h3><p>LUNE · SINGLE</p><small>도시의 푸른 시간을 담은 새 싱글.</small>
+          </article>
+        </div>
+      </section>
+
+      <section class="section news" id="news">
+        <div class="section-heading"><p>03 / NEWS</p><h2>WHAT'S<br>HAPPENING</h2></div>
+        <div class="news-list">
+          <article><time>2026.07.27</time><h3>SIMSIMENT, NEW CHAPTER</h3><p>새로운 목소리와 장면을 연결하는 simsiment의 시작.</p><span>↗</span></article>
+        </div>
+      </section>
+
+      <footer>
+        <p class="footer-mark">SIMSIMENT</p>
+        <div><p>MAKE THE NEXT SCENE.</p><a href="mailto:hello@simsiment.com">HELLO@SIMSIMENT.COM</a></div>
+        <div><p>SEOUL, SOUTH KOREA</p><a href="https://simsiment-entertainment.djfjjd.chatgpt.site/admin">ADMIN</a></div>
+        <small>© 2026 SIMSIMENT. ALL RIGHTS RESERVED.</small>
+      </footer>
     </main>
   </body>
 </html>
