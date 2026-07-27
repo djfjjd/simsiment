@@ -16,12 +16,12 @@ export default async function HomeClient(){
   const items = await getItems();
   const artists=items.filter(x=>x.type==="artist"),releases=items.filter(x=>x.type==="release"),news=items.filter(x=>x.type==="news");
   return <main>
-    <header className="site-header"><a className="logo" href="#top">SIMSIMENT<span>®</span></a>
+    <header className="site-header"><a className="logo" href="#top">SIMSIM_ENT.</a>
       <input className="menu-toggle" id="menu-toggle" type="checkbox" aria-label="메뉴 열기" />
       <label className="menu-button" htmlFor="menu-toggle"><span className="menu-open">MENU</span><span className="menu-close">CLOSE</span></label>
       <nav className="nav">{[["ARTISTS","artists"],["RELEASES","releases"],["NEWS","news"],["ABOUT","about"]].map(([l,id])=><a key={id} href={`#${id}`}>{l}</a>)}<a href="mailto:hello@simsiment.com">CONTACT</a></nav>
     </header>
-    <section className="hero" id="top"><p className="eyebrow">INDEPENDENT ENTERTAINMENT · SEOUL</p><h1>WE MAKE<br/><em>THE NEXT</em><br/>SCENE.</h1><div className="hero-bottom"><p>새로운 목소리와<br/>오래 남을 장면을 만듭니다.</p><span>SCROLL TO EXPLORE ↓</span></div></section>
+    <section className="hero" id="top"><p className="eyebrow">INDEPENDENT ENTERTAINMENT · SEOUL</p><h1 className="hero-acrostic" aria-label="AI Song DAW Flow"><span><b>A</b><i>I</i></span><span><b>S</b>ONG</span><span><b>D</b>AW</span><span><b>F</b>LOW</span></h1><div className="hero-bottom"><p>AI에서 시작해, 노래가 되고<br/>DAW를 지나 하나의 흐름이 됩니다.</p><span>SCROLL TO EXPLORE ↓</span></div></section>
     <section className="manifesto" id="about"><p>OUR PHILOSOPHY</p><h2>낯선 감각을 발견하고,<br/>가장 선명한 방식으로<br/><span>세상과 연결합니다.</span></h2></section>
     <section className="section artists" id="artists"><div className="section-heading"><p>01 / ARTISTS</p><h2>OUR<br/>VOICES</h2><span>{String(artists.length).padStart(2,"0")} ARTISTS</span></div><div className="artist-grid">{artists.map((x,i)=><article className="artist-card" key={x.id}><div className="media-frame">{x.imageUrl?<img src={x.imageUrl} alt={`${x.title} 프로필`}/>:<Placeholder label={x.title}/>}<span className="number">{String(i+1).padStart(2,"0")}</span></div><div><h3>{x.title}</h3><p>{x.subtitle}</p><small>{x.description}</small></div></article>)}</div></section>
     <section className="section releases" id="releases"><div className="section-heading inverse"><p>02 / RELEASES</p><h2>LATEST<br/><i>SOUNDS</i></h2><span>LISTEN NOW</span></div><div className="release-grid">{releases.map(x=><a className="release-card" href={x.link||"#releases"} key={x.id}><div className="album-art">{x.imageUrl?<img src={x.imageUrl} alt={`${x.title} 앨범 아트`}/>:<Placeholder label={x.title}/>}</div><h3>{x.title}</h3><p>{x.subtitle}</p><small>{x.description}</small></a>)}</div></section>
