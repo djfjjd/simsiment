@@ -3,7 +3,7 @@ export async function GET(request:Request,context:{params:Promise<{key:string}>}
   if(!env.MEDIA) return new Response("Not found",{status:404});
   const {key}=await context.params; const object=await env.MEDIA.get(key);
   if(!object) return new Response("Not found",{status:404});
-  const headers=new Headers(); object.writeHttpMetadata(headers); headers.set("etag",object.httpEtag); headers.set("cache-control","public, max-age=31536000, immutable");
+  const headers=new Headers(); object.writeHttpMetadata(headers); headers.set("etag",object.httpEtag); headers.set("cache-control","public, max-age=31536000, immutable"); headers.set("access-control-allow-origin","*"); headers.set("accept-ranges","bytes");
   if(request.headers.get("if-none-match")===object.httpEtag) return new Response(null,{status:304,headers});
   return new Response(object.body,{headers});
 }

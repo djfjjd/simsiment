@@ -8,6 +8,7 @@
     <meta name="description" content="새로운 목소리와 오래 남을 장면을 만드는 독립 엔터테인먼트, simsiment.">
     <title>SIMSIMENT — Make The Next Scene</title>
     <link rel="stylesheet" href="./styles.css">
+    <script src="./content.js" defer></script>
   </head>
   <body style="margin:0;min-height:100vh;background:#f3f1eb;color:#11110f">
     <main>
@@ -25,7 +26,6 @@
       </header>
 
       <section class="hero" id="top">
-        <p class="eyebrow">INDEPENDENT ENTERTAINMENT · SEOUL</p>
         <h1 class="hero-acrostic" aria-label="AI Song DAW Flow">
           <span><b>A</b><i>I</i></span>
           <span><b>S</b>ONG</span>
@@ -33,7 +33,6 @@
           <span><b>F</b>LOW</span>
         </h1>
         <div class="hero-bottom">
-          <p>AI에서 시작해, 노래가 되고<br>DAW를 지나 하나의 흐름이 됩니다.</p>
           <span>SCROLL TO EXPLORE ↓</span>
         </div>
       </section>
@@ -47,22 +46,9 @@
         <div class="section-heading">
           <p>01 / ARTISTS</p>
           <h2>OUR<br>VOICES</h2>
-          <span>03 ARTISTS</span>
+          <span id="artist-count">00 ARTISTS</span>
         </div>
-        <div class="artist-grid">
-          <article class="artist-card">
-            <div class="media-frame"><div class="placeholder"><span>SIMSI</span><i></i></div><span class="number">01</span></div>
-            <div><h3>NOA</h3><p>노아</p><small>장르의 경계를 흐리는 감각적인 보컬과 송라이팅.</small></div>
-          </article>
-          <article class="artist-card">
-            <div class="media-frame"><div class="placeholder"><span>SIMSI</span><i></i></div><span class="number">02</span></div>
-            <div><h3>LUNE</h3><p>룬</p><small>차갑고 선명한 사운드로 새로운 장면을 만드는 아티스트.</small></div>
-          </article>
-          <article class="artist-card">
-            <div class="media-frame"><div class="placeholder"><span>SIMSI</span><i></i></div><span class="number">03</span></div>
-            <div><h3>DIVE</h3><p>다이브</p><small>무대 위 에너지를 가장 솔직한 언어로 기록합니다.</small></div>
-          </article>
-        </div>
+        <div class="artist-grid" id="artist-grid"></div>
       </section>
 
       <section class="section releases" id="releases">
@@ -71,23 +57,12 @@
           <h2>LATEST<br><i>SOUNDS</i></h2>
           <span>LISTEN NOW</span>
         </div>
-        <div class="release-grid">
-          <article class="release-card">
-            <div class="album-art"><div class="placeholder"><span>SIMSI</span><i></i></div></div>
-            <h3>AFTERIMAGE</h3><p>NOA · 1ST EP</p><small>잔상처럼 남는 다섯 개의 트랙.</small>
-          </article>
-          <article class="release-card">
-            <div class="album-art"><div class="placeholder"><span>SIMSI</span><i></i></div></div>
-            <h3>BLUE HOUR</h3><p>LUNE · SINGLE</p><small>도시의 푸른 시간을 담은 새 싱글.</small>
-          </article>
-        </div>
+        <div class="release-grid" id="release-grid"></div>
       </section>
 
       <section class="section news" id="news">
         <div class="section-heading"><p>03 / NEWS</p><h2>WHAT'S<br>HAPPENING</h2></div>
-        <div class="news-list">
-          <article><time>2026.07.27</time><h3>SIMSIMENT, NEW CHAPTER</h3><p>새로운 목소리와 장면을 연결하는 simsiment의 시작.</p><span>↗</span></article>
-        </div>
+        <div class="news-list" id="news-list"></div>
       </section>
 
       <footer>

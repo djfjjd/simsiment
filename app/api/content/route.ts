@@ -1,11 +1,12 @@
 import { getChatGPTUser } from "../../chatgpt-auth";
 import { listContent, saveContent, type ContentItem, type ContentType } from "../../../lib/content";
 export const dynamic = "force-dynamic";
+const publicHeaders={"access-control-allow-origin":"*","cache-control":"no-store"};
 async function denied(){ return await getChatGPTUser() ? null : Response.json({error:"관리자 로그인이 필요합니다."},{status:401}); }
 export async function GET(request:Request){
   const admin=new URL(request.url).searchParams.get("admin")==="1";
   if(admin){ const response=await denied(); if(response) return response; }
-  return Response.json({items:await listContent(admin)});
+  return Response.json({items:await listContent(admin)},{headers:admin?{"cache-control":"no-store"}:publicHeaders});
 }
 export async function POST(request:Request){
   const response=await denied(); if(response) return response;
